@@ -73,4 +73,29 @@ docker compose up --build backend worker --detach --no-deps --gpus all
 - MinIO buckets are not auto-created. Use the MinIO console or `mc` CLI to create the bucket defined in `MINIO_BUCKET` before attempting uploads.
 - If the API returns CORS errors, update `CORS_ALLOW_ORIGINS` in `.env` or `env/backend.env` to include your hostnames.
 
+## Quick Start Scripts
+
+For convenience, we've included cross-platform quick start scripts:
+
+### Windows
+```bash
+start.bat
+```
+
+### Linux/macOS
+```bash
+./start.sh
+```
+
+### Verification Script
+```bash
+# Check if everything is working
+./verify.sh
+```
+
+These scripts will:
+- Verify Docker installation and port availability
+- Start all services automatically
+- Provide helpful status information
+
 With this baseline in place, both the FastAPI backend and the React frontend can evolve independently while still sharing a reproducible, production-like runtime.
