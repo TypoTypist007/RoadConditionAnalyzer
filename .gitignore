@@ -1,1 +1,12 @@
 node_modules/
+.DS_Store
+.env
+.env.*
+.envrc
+env/*.local
+coverage/
+dist/
+*.pyc
+__pycache__/
+.vscode/
+.idea/
